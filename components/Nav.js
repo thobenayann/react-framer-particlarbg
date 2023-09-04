@@ -10,15 +10,15 @@ import {
 
 // nav data
 export const navData = [
-    { name: 'home', path: '/', icon: <HiHome /> },
-    { name: 'about', path: '/about', icon: <HiUser /> },
-    { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-    { name: 'work', path: '/work', icon: <HiViewColumns /> },
+    { name: 'Accueil', path: '/', icon: <HiHome /> },
     {
-        name: 'testimonials',
+        name: 'Témoignages',
         path: '/testimonials',
         icon: <HiChatBubbleBottomCenterText />,
     },
+    { name: 'Services', path: '/services', icon: <HiRectangleGroup /> },
+    { name: 'Réalisations', path: '/work', icon: <HiViewColumns /> },
+    { name: 'Mon histoire', path: '/about', icon: <HiUser /> },
     {
         name: 'contact',
         path: '/contact',
