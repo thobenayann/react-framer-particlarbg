@@ -38,7 +38,7 @@ const Home = () => {
                         initial='hidden'
                         animate='show'
                         exit='hidden'
-                        className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
+                        className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-white'
                     >
                         J’accompagne les entreprises et les industriels à toutes
                         les étapes de leurs projets de vidéos, de montage et
@@ -51,6 +51,8 @@ const Home = () => {
             <div className='w-full h-full absolute right-0 bottom-0'>
                 {/* bg img */}
                 <div className='bg-none xl:bg-mro xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-overlay'></div>
+                {/* particles */}
+                <ParticlesContainer />
             </div>
         </div>
     );
