@@ -1,10 +1,11 @@
-// next image
-import Image from 'next/image';
+// icons
+import { BiAtom } from 'react-icons/bi';
+import { IoIosPeople } from 'react-icons/Io';
+import { BsEyeFill } from 'react-icons/Bs';
 
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
-import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
+import ServiceCard from '../components/ServiceCard';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -13,10 +14,31 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 
 const Home = () => {
+    const cardContent = [
+        {
+            icon: <IoIosPeople size='1.5em' />,
+            title: 'Humanisez',
+            subtitle:
+                'Votre communication pour recruter des talents qui partagent vos valeurs',
+        },
+        {
+            icon: <BiAtom size='1.5em' />,
+            title: 'Dynamisez',
+            subtitle:
+                'vos supports de formation avec des formats courts qui maintiennent l’attention et facilitent la mémorisation',
+        },
+        {
+            icon: <BsEyeFill size='1.5em' />,
+            title: 'Visibilitez',
+            subtitle:
+                'partagez vos événements, Améliorez l’expérience utilisateur…',
+        },
+    ];
+
     return (
         <div className='h-full w-full'>
             {/* text */}
-            <div className='h-full w-full xl:h-auto xl:w-1/2 xl:p-20'>
+            <div className='h-full w-full xl:h-auto xl:w-1/2 xl:pl-20 xl:pt-16'>
                 <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'>
                     {/* title */}
                     <motion.h1
@@ -47,10 +69,21 @@ const Home = () => {
                     </motion.p>
                 </div>
             </div>
+            <div className='flex w-full justify-center gap-x-10 px-96'>
+                {cardContent.map((card, index) => (
+                    <ServiceCard
+                        key={index}
+                        icon={card.icon}
+                        title={card.title}
+                        subtitle={card.subtitle}
+                    />
+                ))}
+            </div>
+
             {/* image */}
             <div className='w-full h-full absolute right-0 bottom-0'>
                 {/* bg img */}
-                <div className='bg-none xl:bg-mro xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-overlay'></div>
+                <div className='bg-none xl:bg-mro xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute -z-10'></div>
                 {/* particles */}
                 <ParticlesContainer />
             </div>

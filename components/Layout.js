@@ -8,12 +8,11 @@ const roboto = Roboto({
 
 // Components
 import Nav from '../components/Nav';
-import Header from '../components/Header';
 
 const Layout = ({ children }) => {
     return (
         <div
-            className={`page bg-white/20 text-white bg-cover bg-no-repeat ${roboto.className} font-roboto relative`}
+            className={`page text-white bg-cover bg-no-repeat ${roboto.className} font-roboto relative`}
         >
             <Nav />
             {children}

@@ -20,7 +20,7 @@ export const navData = [
     { name: 'Réalisations', path: '/work', icon: <HiViewColumns /> },
     { name: 'Mon histoire', path: '/about', icon: <HiUser /> },
     {
-        name: 'contact',
+        name: 'Contact',
         path: '/contact',
         icon: <HiEnvelope />,
     },

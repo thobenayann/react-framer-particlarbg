@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
     content: [
         './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -40,6 +42,11 @@ module.exports = {
                 poppins: [`var(--font-poppins)`, 'sans-serif'],
                 sora: [`var(--font-sora)`, 'sans-serif'],
             },
+            textShadow: {
+                sm: '0 1px 2px var(--tw-shadow-color)',
+                DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+                lg: '0 8px 16px var(--tw-shadow-color)',
+            },
         },
     },
     container: {
@@ -47,5 +54,17 @@ module.exports = {
             DEFAULT: '15px',
         },
     },
-    plugins: [require('tailwind-scrollbar')],
+    plugins: [
+        require('tailwind-scrollbar'),
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    'text-shadow': (value) => ({
+                        textShadow: value,
+                    }),
+                },
+                { values: theme('textShadow') }
+            );
+        }),
+    ],
 };
