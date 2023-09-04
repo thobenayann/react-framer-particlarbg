@@ -16,18 +16,21 @@ import { fadeIn } from '../variants';
 const Home = () => {
     const cardContent = [
         {
+            id: 1,
             icon: <IoIosPeople size='1.5em' />,
             title: 'Humanisez',
             subtitle:
                 'Votre communication pour recruter des talents qui partagent vos valeurs',
         },
         {
+            id: 2,
             icon: <BiAtom size='1.5em' />,
             title: 'Dynamisez',
             subtitle:
                 'vos supports de formation avec des formats courts qui maintiennent l’attention et facilitent la mémorisation',
         },
         {
+            id: 3,
             icon: <BsEyeFill size='1.5em' />,
             title: 'Visibilitez',
             subtitle:
@@ -70,9 +73,9 @@ const Home = () => {
                 </div>
             </div>
             <div className='flex w-full justify-center gap-x-10 px-96'>
-                {cardContent.map((card, index) => (
+                {cardContent.map((card) => (
                     <ServiceCard
-                        key={index}
+                        key={card.id}
                         icon={card.icon}
                         title={card.title}
                         subtitle={card.subtitle}
