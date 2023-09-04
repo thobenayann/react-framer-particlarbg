@@ -35,35 +35,66 @@ const Nav = () => {
     const router = useRouter();
     const pathname = router.pathname;
     return (
-        <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen'>
-            {/* inner */}
-            <div className='flex w-full xl:flex-col items-center justify-between gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
-                {navData.map((link, index) => {
-                    return (
-                        <Link
-                            className={`${
-                                link.path === pathname && 'text-accent'
-                            } relative items-center group hover:text-accent transition-all duration-300`}
-                            href={link.path}
-                            key={index}
-                        >
-                            {/* tooltip */}
-                            <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
-                                <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
-                                    <span className='text-[12px] leading-none font-semibold capitalize'>
-                                        {link.name}
-                                    </span>
-                                    {/* triangle */}
-                                    <div className='border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2'></div>
+        <>
+            {/* Desktop NAV */}
+            <nav className='fixed z-50 right-0 bg-white/10 w-full'>
+                <div className='hidden xl:flex w-full items-center justify-end gap-x-10 px-4 h-max py-4 bg-transparent backdrop-blur-sm text-xl'>
+                    {navData.map((link, index) => {
+                        return (
+                            <Link
+                                className={`relative items-center group hover:text-[#003178] transition-all duration-300 ${
+                                    link.path === pathname
+                                        ? link.name === 'Accueil'
+                                            ? 'text-[#003178]'
+                                            : 'underline decoration-[#003178] underline-offset-2'
+                                        : ''
+                                }`}
+                                href={link.path}
+                                key={index}
+                            >
+                                {/* Links */}
+                                {link.name === 'Accueil' ? (
+                                    <div>{link.icon}</div>
+                                ) : (
+                                    <span>{link.name}</span>
+                                )}
+                            </Link>
+                        );
+                    })}
+                </div>
+            </nav>
+
+            {/* Table and mobile NAV */}
+            <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:hidden'>
+                {/* inner */}
+                <div className='flex w-full xl:flex-col items-center justify-between gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
+                    {navData.map((link, index) => {
+                        return (
+                            <Link
+                                className={`${
+                                    link.path === pathname && 'text-[#003178]'
+                                } relative items-center group hover:text-[#003178] transition-all duration-300`}
+                                href={link.path}
+                                key={index}
+                            >
+                                {/* tooltip */}
+                                <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
+                                    <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
+                                        <span className='text-[12px] leading-none font-semibold capitalize'>
+                                            {link.name}
+                                        </span>
+                                        {/* triangle */}
+                                        <div className='border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2'></div>
+                                    </div>
                                 </div>
-                            </div>
-                            {/* icon */}
-                            <div>{link.icon}</div>
-                        </Link>
-                    );
-                })}
-            </div>
-        </nav>
+                                {/* icon */}
+                                <div>{link.icon}</div>
+                            </Link>
+                        );
+                    })}
+                </div>
+            </nav>
+        </>
     );
 };
 

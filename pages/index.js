@@ -14,9 +14,9 @@ import { fadeIn } from '../variants';
 
 const Home = () => {
     return (
-        <div className='h-full w-1/2'>
+        <div className='h-full w-full'>
             {/* text */}
-            <div className='w-full h-full'>
+            <div className='h-full w-full xl:h-auto xl:w-1/2 xl:p-20'>
                 <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'>
                     {/* title */}
                     <motion.h1
