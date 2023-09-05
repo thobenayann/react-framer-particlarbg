@@ -1,7 +1,7 @@
 // icons
 import { BiAtom } from 'react-icons/bi';
-import { IoIosPeople } from 'react-icons/Io';
-import { BsEyeFill } from 'react-icons/Bs';
+import { IoIosPeople } from 'react-icons/io';
+import { BsEyeFill } from 'react-icons/bs';
 
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
