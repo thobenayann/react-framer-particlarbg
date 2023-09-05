@@ -86,7 +86,7 @@ const Home = () => {
             {/* image */}
             <div className='w-full h-full absolute right-0 bottom-0'>
                 {/* bg img */}
-                <div className='bg-none xl:bg-mro xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute -z-10'></div>
+                <div className='bg-mro bg-cover bg-center xl:bg-right bg-no-repeat w-full h-full absolute -z-10'></div>
                 {/* particles */}
                 <ParticlesContainer />
             </div>
