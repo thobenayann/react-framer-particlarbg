@@ -86,7 +86,18 @@ const Home = () => {
             {/* image */}
             <div className='w-full h-full absolute right-0 bottom-0'>
                 {/* bg img */}
-                <div className='bg-mro bg-cover bg-center xl:bg-right bg-no-repeat w-full h-full absolute -z-10'></div>
+                {/* <div className='bg-mro bg-cover bg-center xl:bg-right bg-no-repeat w-full h-full absolute -z-10'></div> */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    className='absolute -z-10 w-auto min-w-full min-h-full max-w-none'
+                >
+                    <source
+                        src='/videos/Annimation-3D_NEW.mp4'
+                        type='video/mp4'
+                    />
+                </video>
                 {/* particles */}
                 <ParticlesContainer />
             </div>
