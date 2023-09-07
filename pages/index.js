@@ -52,7 +52,7 @@ const Home = () => {
                         className='h1'
                     >
                         Des{' '}
-                        <span className='underline decoration-blue-500 decoration-2 underline-offset-4'>
+                        <span className='underline decoration-[#007EA7] decoration-2 underline-offset-4'>
                             vidéos professionnelles
                         </span>{' '}
                         pour vendre, former et communiquer
@@ -72,7 +72,7 @@ const Home = () => {
                     </motion.p>
                 </div>
             </div>
-            <div className='flex w-full justify-center gap-x-10 px-96'>
+            <div className='flex w-full justify-center gap-x-10 px-96 z-20'>
                 {cardContent.map((card) => (
                     <ServiceCard
                         key={card.id}

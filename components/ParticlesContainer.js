@@ -12,7 +12,7 @@ const ParticlesContainer = () => {
 
     return (
         <Particles
-            className='w-full h-full absolute translate-z-0'
+            className='w-full h-full absolute translate-z-0 -z-10'
             id='tsparticles'
             init={particlesInit}
             loaded={particlesLoaded}
@@ -27,7 +27,7 @@ const ParticlesContainer = () => {
                             mode: 'push',
                         },
                         onHover: {
-                            enable: true,
+                            enable: false,
                             mode: 'repulse',
                         },
                         resize: true,
