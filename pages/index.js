@@ -52,7 +52,7 @@ const Home = () => {
                         className='h1'
                     >
                         Des{' '}
-                        <span className='underline decoration-blue-500 decoration-2 underline-offset-4'>
+                        <span className='underline decoration-[#007EA7] decoration-2 underline-offset-4'>
                             vidéos professionnelles
                         </span>{' '}
                         pour vendre, former et communiquer

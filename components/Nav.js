@@ -39,11 +39,11 @@ const Nav = () => {
                     {navData.map((link) => {
                         return (
                             <Link
-                                className={`relative items-center group hover:text-blue-500 transition-all duration-300 ${
+                                className={`relative items-center group hover:text-[#007EA7] transition-all duration-300 ${
                                     link.path === pathname
                                         ? link.name === 'Accueil'
-                                            ? 'text-blue-500'
-                                            : 'underline decoration-blue-500 underline-offset-2'
+                                            ? 'text-[#007EA7]'
+                                            : 'underline decoration-[#007EA7] underline-offset-2'
                                         : ''
                                 }`}
                                 href={link.path}
@@ -69,8 +69,8 @@ const Nav = () => {
                         return (
                             <Link
                                 className={`${
-                                    link.path === pathname && 'text-blue-500'
-                                } relative items-center group hover:text-blue-500 transition-all duration-300`}
+                                    link.path === pathname && 'text-[#007EA7]'
+                                } relative items-center group hover:text-[#007EA7] transition-all duration-300`}
                                 href={link.path}
                                 key={link.id}
                             >
